@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair", serif;
+  scroll-behavior: smooth;
+}
+*:hover {
+  transition: 50ms ease-in-out;
+}
+
+.navlink:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px white;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.navlink:hover:after {
+  transform: scaleX(1);
+}
+
+.navlink .border-g:after {
+  transform-origin: 0% 50%;
+}
+
+.fade-out {
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 4s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.max-h {
+  max-height: 20rem;
+}
+.max-h img {
+  max-height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
